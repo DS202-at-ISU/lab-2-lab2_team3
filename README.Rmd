@@ -110,9 +110,40 @@ print(range_var)
 ```
 
 ```{r}
+library(ggplot2)
 ggplot(aes(x = 'Sale Price', y = `TotalLivingArea (sf)` ), data=ames) +
   geom_boxplot() +
   coord_flip()
   
 ```
+```{r}
+library(ggplot2)
+
+
+ggplot(ames, aes(x = factor(Bedrooms), y = `Sale Price`)) +
+  stat_summary(fun = mean, geom = "bar", fill = "skyblue") +
+  labs(x = "Number of Bedrooms", y = "Average Sale Price", title = "Average Sale Price vs. Number of Bedrooms") +
+  theme_minimal()
+
+```
+Relationship of price with bedrooms
+
+```{r}
+# Load required packages
+library(ggplot2)
+
+# Assuming 'ames' is your dataset
+
+# Remove observations with missing values in the 'Neighborhood' column
+ames_filtered <- na.omit(ames[!is.na(ames$Neighborhood), ])
+
+# Create a bar plot of Sale Price vs. Neighborhood
+ggplot(ames_filtered, aes(x = Neighborhood, y = `Sale Price`)) +
+  stat_summary(fun = mean, geom = "bar", fill = "skyblue") +
+  labs(x = "Neighborhood", y = "Average Sale Price", title = "Average Sale Price by Neighborhood") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  theme_minimal()+ coord_flip()
+
+```
+Relationship of price and neigborhood
 
