@@ -19,6 +19,10 @@ All submissions to the github repo will be automatically uploaded for grading on
 Submit a link to your repository on Canvas (only one submission per team) to signal to the instructors that you are done with your submission.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4aec923a397186abcfb3323cfbff9642c7a0d504
 ```{r,}
 library(classdata)
 df = ames
@@ -45,12 +49,25 @@ Neighborhoor - Factor   (neighborhood located in)
 We expect their data range to be generally between their highest and lowest values. For AC,Fireplace we can have NA or Present. 
  
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 4aec923a397186abcfb3323cfbff9642c7a0d504
 
 2. is there a variable of special focus?
  - the variables we want to look at are Sale Price and TotalLivingArea (sf)
  
 Both are numeric variables
+<<<<<<< HEAD
+
+Sale price is the main variable and total living area is the variable that might be related
+ 
+ #Step Three
+=======
+#Step Three
+>>>>>>> 35ed1ec6b32361c60c078eddc0666aede76999c1
+=======
+>>>>>>> 4aec923a397186abcfb3323cfbff9642c7a0d504
 
 
  
@@ -70,6 +87,7 @@ ggplot(ames, aes(x = log(`Sale Price`))) +
 
 
 ```
+<<<<<<< HEAD
 
 ```{r}
 range(ames$`Sale Price`)
@@ -92,3 +110,20 @@ ggplot(ames, aes(x = `TotalLivingArea (sf)`, y = log( `Sale Price`))) +
 ```
 
 4. Scatterplot shows a linear relationship with the price. Some oddities are the top most points where the area is low but price is much higher. We can see these oddities in the sales price. 
+=======
+<<<<<<< HEAD
+
+
+library(ggplot2)
+
+```{r}
+ggplot(ames, aes(x = 'TotalLivingArea (sf)', y = 'Sale Price')) +
+  geom_point() +
+  labs(x = "TotalLivingArea (sf)", y = "Sale Price", title = "Scatterplot of Sale Price vs. Total Living Area")
+
+
+```
+
+
+General pattern is bell shaped curve with concentrated frequency around 12.5. Oddities is outliers around sale price 0 and 20.
+>>>>>>> 8cb0892c15e1f2fa51cd1f205e44d51b364dc348
