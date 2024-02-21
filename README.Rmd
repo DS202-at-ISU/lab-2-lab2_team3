@@ -76,6 +76,7 @@ Sale price is the main variable and total living area is the variable that might
  
 ```{r}
 library(ggplot2)
+range(ames$`Sale Price`)
 
 
 
@@ -85,32 +86,7 @@ ggplot(ames, aes(x = log(`Sale Price`))) +
   theme_minimal()
   
 
-
 ```
-<<<<<<< HEAD
-
-```{r}
-range(ames$`Sale Price`)
-
-```
-3.General pattern is bell shaped curve with concentrated frequency around 12.5. Oddities is outliers around sale price 0 and 20. Range of sale price is 0 to 20500000
-
-```{r}
-living_area <- ames$`TotalLivingArea (sf)`
-living_area <- living_area[!is.na(living_area)]
-x <- range(living_area)
-x
-
-```
-```{r}
-ggplot(ames, aes(x = `TotalLivingArea (sf)`, y = log( `Sale Price`))) +
-  geom_point() +
-  labs(x = "Total Living Area (sf)", y = "Sale Price", title = "Scatterplot of Total Living Area vs. Sale Price") +
-  theme_minimal()
-```
-
-4. Scatterplot shows a linear relationship with the price. Some oddities are the top most points where the area is low but price is much higher. We can see these oddities in the sales price. 
-=======
 <<<<<<< HEAD
 
 
@@ -124,6 +100,19 @@ ggplot(ames, aes(x = 'TotalLivingArea (sf)', y = 'Sale Price')) +
 
 ```
 
+#Step Four
+```{r}
+cleaned_data <- na.omit(ames$`TotalLivingArea (sf)`)
 
+range_var <- range(cleaned_data)
+print(range_var)
+
+```
+
+```{r}
+ggplot(aes(x = 'Sale Price', y = `TotalLivingArea (sf)` ), data=ames) +
+  geom_boxplot() +
+  coord_flip()
+  
+```
 General pattern is bell shaped curve with concentrated frequency around 12.5. Oddities is outliers around sale price 0 and 20.
->>>>>>> 8cb0892c15e1f2fa51cd1f205e44d51b364dc348
