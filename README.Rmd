@@ -18,41 +18,16 @@ Include your answers in this document (Rmd file). Make sure that it knits proper
 All submissions to the github repo will be automatically uploaded for grading once the due date is passed.
 Submit a link to your repository on Canvas (only one submission per team) to signal to the instructors that you are done with your submission.
 
-<<<<<<< HEAD
-```{r,}
-library(classdata)
-df = ames
-str(ames)
-```
-1. We have the following variables - 
-Parcel ID - Character    (House ID)
-Address - Character      (Address of hosue in ames)
-Style - Factor           (Dimensions and stuff)
-Occupancy - factor       (Occupies or free)
-Sale Date - Date         (Date of sale)
-Sale Price - Numeric     (Price sold at)
-Multi Sale - charater    (if sold multiple times)
-YearBuilt - Numeric      (Year built in)
-Acres - Numeric          (Area of property)
-TotalLivingArea - Numeric (Living Area of property)
-Bedrooms - Numeric        (total bedrooms in house)
-FinishedBsmtArea - Numeric  (FInsihed basement work)
-LotArea - Numeric  (Area of total parking lot)
-AC - character (If ac is present or not)
-FirePlace - character   (Fireplace present or not)
-Neighborhoor - Factor   (neighborhood located in)
+#Step Three
 
-We expect their data range to be generally between their highest and lowest values. For AC,Fireplace we can have NA or Present. 
- 
+#First find the range of the variable TotalLivingArea (sf)
+range_var <- range(ames$'TotalLivingArea (sf)')
+print(range_var)
 
-=======
+#Import ggplot2
+library(ggplot2)
 
-2. is there a variable of special focus?
- - the variables we want to look at are Sale Price and TotalLivingArea (sf)
- 
-Both are numeric variables
+#Plot TotalLivingArea (sf) on a histogram
+ggplot(ames, aes(x = 'TotalLivingArea (sf)')) +
+  geom_histogram(binwidth = 1)
 
-
- 
- P
->>>>>>> c925fe450723b846485fb6ad26fb09d56e3b7678
