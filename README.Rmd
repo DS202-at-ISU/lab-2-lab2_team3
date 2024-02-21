@@ -70,4 +70,3 @@ library(ggplot2)
 ggplot(ames, aes(x = 'TotalLivingArea (sf)')) +
   geom_histogram(binwidth = 1)
 
-
