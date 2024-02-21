@@ -88,13 +88,13 @@ range(ames$`Sale Price`)
     ## [1]        0 20500000
 
 ``` r
-ggplot(ames, aes(x = log(`Sale Price`))) +
-  geom_histogram(binwidth = 0.1, fill = "skyblue", color = "black") +
+ggplot(ames, aes(x = `Sale Price`)) +
+  geom_histogram(fill = "skyblue", color = "black") +
   labs(x = "Log(Sale Price)", y = "Frequency", title = "Distribution of Log(Sale Price)") +
   theme_minimal()
 ```
 
-    ## Warning: Removed 2206 rows containing non-finite values (`stat_bin()`).
+    ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 \<\<\<\<\<\<\< HEAD
@@ -102,10 +102,12 @@ ggplot(ames, aes(x = log(`Sale Price`))) +
 library(ggplot2)
 
 ``` r
-ggplot(ames, aes(x = 'TotalLivingArea (sf)', y = 'Sale Price')) +
+ggplot(ames, aes(x = `TotalLivingArea (sf)`, y = `Sale Price`)) +
   geom_point() +
   labs(x = "TotalLivingArea (sf)", y = "Sale Price", title = "Scatterplot of Sale Price vs. Total Living Area")
 ```
+
+    ## Warning: Removed 447 rows containing missing values (`geom_point()`).
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 

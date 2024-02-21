@@ -80,20 +80,20 @@ range(ames$`Sale Price`)
 
 
 
-ggplot(ames, aes(x = log(`Sale Price`))) +
-  geom_histogram(binwidth = 0.1, fill = "skyblue", color = "black") +
+ggplot(ames, aes(x = `Sale Price`)) +
+  geom_histogram(fill = "skyblue", color = "black") +
   labs(x = "Log(Sale Price)", y = "Frequency", title = "Distribution of Log(Sale Price)") +
   theme_minimal()
   
 
 ```
-<<<<<<< HEAD
+General pattern is right skewed curve with concentrated frequency around 12.5. Oddities is outliers around sale price 1.5 and 2.0.
 
 
 library(ggplot2)
 
 ```{r}
-ggplot(ames, aes(x = 'TotalLivingArea (sf)', y = 'Sale Price')) +
+ggplot(ames, aes(x = `TotalLivingArea (sf)`, y = `Sale Price`)) +
   geom_point() +
   labs(x = "TotalLivingArea (sf)", y = "Sale Price", title = "Scatterplot of Sale Price vs. Total Living Area")
 
@@ -115,4 +115,4 @@ ggplot(aes(x = 'Sale Price', y = `TotalLivingArea (sf)` ), data=ames) +
   coord_flip()
   
 ```
-General pattern is bell shaped curve with concentrated frequency around 12.5. Oddities is outliers around sale price 0 and 20.
+
