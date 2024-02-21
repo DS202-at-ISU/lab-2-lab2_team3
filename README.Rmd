@@ -18,6 +18,7 @@ Include your answers in this document (Rmd file). Make sure that it knits proper
 All submissions to the github repo will be automatically uploaded for grading once the due date is passed.
 Submit a link to your repository on Canvas (only one submission per team) to signal to the instructors that you are done with your submission.
 
+<<<<<<< HEAD
 ```{r,}
 library(classdata)
 df = ames
@@ -44,3 +45,14 @@ Neighborhoor - Factor   (neighborhood located in)
 We expect their data range to be generally between their highest and lowest values. For AC,Fireplace we can have NA or Present. 
  
 
+=======
+
+2. is there a variable of special focus?
+ - the variables we want to look at are Sale Price and TotalLivingArea (sf)
+ 
+Both are numeric variables
+
+
+ 
+ P
+>>>>>>> c925fe450723b846485fb6ad26fb09d56e3b7678
