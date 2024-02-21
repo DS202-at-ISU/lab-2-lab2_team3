@@ -129,15 +129,11 @@ ggplot(ames, aes(x = factor(Bedrooms), y = `Sale Price`)) +
 Relationship of price with bedrooms
 
 ```{r}
-# Load required packages
 library(ggplot2)
 
-# Assuming 'ames' is your dataset
 
-# Remove observations with missing values in the 'Neighborhood' column
 ames_filtered <- na.omit(ames[!is.na(ames$Neighborhood), ])
 
-# Create a bar plot of Sale Price vs. Neighborhood
 ggplot(ames_filtered, aes(x = Neighborhood, y = `Sale Price`)) +
   stat_summary(fun = mean, geom = "bar", fill = "skyblue") +
   labs(x = "Neighborhood", y = "Average Sale Price", title = "Average Sale Price by Neighborhood") +
