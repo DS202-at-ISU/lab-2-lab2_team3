@@ -20,6 +20,9 @@ Submit a link to your repository on Canvas (only one submission per team) to sig
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4aec923a397186abcfb3323cfbff9642c7a0d504
 ```{r,}
 library(classdata)
 df = ames
@@ -46,11 +49,16 @@ Neighborhoor - Factor   (neighborhood located in)
 We expect their data range to be generally between their highest and lowest values. For AC,Fireplace we can have NA or Present. 
  
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4aec923a397186abcfb3323cfbff9642c7a0d504
 
 2. is there a variable of special focus?
  - the variables we want to look at are Sale Price and TotalLivingArea (sf)
  
 Both are numeric variables
+<<<<<<< HEAD
 
 Sale price is the main variable and total living area is the variable that might be related
  
@@ -58,15 +66,36 @@ Sale price is the main variable and total living area is the variable that might
 =======
 #Step Three
 >>>>>>> 35ed1ec6b32361c60c078eddc0666aede76999c1
+=======
+>>>>>>> 4aec923a397186abcfb3323cfbff9642c7a0d504
 
-#First find the range of the variable TotalLivingArea (sf)
-range_var <- range(ames$'TotalLivingArea (sf)')
-print(range_var)
 
-#Import ggplot2
+ 
+ P
+>>>>>>> c925fe450723b846485fb6ad26fb09d56e3b7678
+ 
+```{r}
+library(ggplot2)
+range(ames$`Sale Price`)
+
+
+
+ggplot(ames, aes(x = log(`Sale Price`))) +
+  geom_histogram(binwidth = 0.1, fill = "skyblue", color = "black") +
+  labs(x = "Log(Sale Price)", y = "Frequency", title = "Distribution of Log(Sale Price)") +
+  theme_minimal()
+  
+
+```
+
+
 library(ggplot2)
 
-#Plot TotalLivingArea (sf) on a histogram
-ggplot(ames, aes(x = 'TotalLivingArea (sf)')) +
-  geom_histogram(binwidth = 1)
+```{r}
+ggplot(ames, aes(x = 'TotalLivingArea (sf)', y = 'Sale Price')) +
+  geom_point()
+
+
+```
+
 
