@@ -87,15 +87,18 @@ ggplot(ames, aes(x = log(`Sale Price`))) +
   
 
 ```
+<<<<<<< HEAD
 
 
 library(ggplot2)
 
 ```{r}
 ggplot(ames, aes(x = 'TotalLivingArea (sf)', y = 'Sale Price')) +
-  geom_point()
+  geom_point() +
+  labs(x = "TotalLivingArea (sf)", y = "Sale Price", title = "Scatterplot of Sale Price vs. Total Living Area")
 
 
 ```
 
 
+General pattern is bell shaped curve with concentrated frequency around 12.5. Oddities is outliers around sale price 0 and 20.
