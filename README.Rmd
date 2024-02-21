@@ -70,4 +70,4 @@ ggplot(ames, aes(x = log(`Sale Price`))) +
   
 
 ```
-
+General pattern is bell shaped curve with concentrated frequency around 12.5. Oddities is outliers around sale price 0 and 20.
